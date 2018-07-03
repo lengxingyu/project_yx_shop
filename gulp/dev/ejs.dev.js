@@ -37,7 +37,7 @@ function devEjs(){
 
                 addHtml += "<meta name='format-detection' content='telephone=no, email=no' />\n";
 
-                addHtml += "<link rel='stylesheet'  href='../../css/demo.css'/>\n";
+                addHtml += "<link rel='stylesheet'  href='../css/demo.css'/>\n";
 
                 $('head').prepend(addHtml);
 
