@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no, email=no">
+<link rel="stylesheet" href="../../css/demo.css">
+
+    <!--通用媒体查询-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+
+
+    <title>个人中心 </title>
+</head>
+
+<body>
+
+<!--主图轮播-->
+<div class="product_autoPlay">
+
+    <!--图片部分-->
+    <div class="product_details_autoPlay ">
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_1.jpg"></div>
+        </div>
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_2.jpg"></div>
+        </div>
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_3.jpg"></div>
+        </div>
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_4.jpg"></div>
+        </div>
+    </div>
+
+    <!--点点部分——自动生成-->
+
+</div>
+
+<div class="product_show_content">
+
+    <!--主体内容-->
+    <div class="img_content">
+        <!--图片-->
+        <div class="product_details_autoPlay"></div>
+    </div>
+
+    <!--遮罩层-->
+    <div class="showimg_shadow"></div>
+
+    <div class="delete_banner">X</div>
+
+</div>
+
+
+
+
+
+<script src="../js/jquery-3.0.0.min.js"></script>
+<script src="../js/demo.js"></script>
+<script>
+
+    /*图片懒加载*/
+    jfLazyLoading.lazyLoadInit({
+
+        "bottomDistance":"50"//距离底部的距离，触发事件，单位省略
+    })
+
+
+    /*商品详情页图片滚动以及缩放*/
+    productInfoPlay.init({
+
+        "moveEle":"product_details_autoPlay",//包裹所有图片的class选择器
+
+        "moveEleParent":"product_autoPlay",//包括点点以及图片的父元素，class选择器
+
+        "allShowEle":"product_show_content",//弹出模块框架的class值
+
+        "scaleEleParent":"jdshow_center_center",//缩放元素的父元素，class值
+
+        fn:function(){//执行相应的脚本
+
+            jfProductDetails.scrollEle(document.getElementById('NavTab'),45)
+        }
+    });
+
+
+
+
+</script>
+</body>
+
+
+
+</html>
