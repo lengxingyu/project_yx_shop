@@ -1,0 +1,57 @@
+<style>
+    button {
+
+        width: 100%;
+        height: 50px;
+        display: block;
+        margin: 10px 0;
+    }
+
+</style>
+
+<button onclick="jfShowTips.toastShow({'text' : '提示信息'})">弱提示</button>
+
+<button onclick="jfShowTips.loadingShow({
+'text' : '加载中',
+'thisNode':loadInnerHtml.node.loading,
+'thisClass':'small'//成功失败动画是为false
+})">弹出框</button>
+
+<button onclick="
+jfShowTips.dialogShow({
+'mainText':'商品已加入购物车',
+'minText':'京东实物商品请从首页进入嘉福商城【购物车】查看',
+'checkFn':function() {
+
+    jfShowTips.dialogRemove(function() {
+        setTimeout(function() {
+          window.history.go(-1)
+        },10)
+
+    })
+
+
+
+}
+});
+">
+    弹出框
+</button>
+
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+<button></button>
+
+

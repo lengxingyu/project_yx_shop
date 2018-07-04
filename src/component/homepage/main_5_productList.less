@@ -1,0 +1,194 @@
+.homepage_product_list {
+
+  position: relative;
+
+  .hot_goods_title {
+    text-align: center;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 15px 0 5px 0;
+    color: #fa4143;
+    div {
+      position: relative;
+      margin: 0 auto;
+      width: 30%;
+      border: 1px solid #fa4143;
+      border-radius: 50px;
+      box-shadow: 2px 2px 0 #f6d1d5;
+      img {
+        width: 16px;
+        height: 16px;
+        margin-right: 5px;
+      }
+      span {
+        color: #4a4a4a;
+      }
+      &:before,&:after {
+        content: '/////////';
+        position: absolute;
+        top: 2px;
+        font-weight: normal;
+        opacity: .4;
+      }
+      &:before{
+        left: -55%;
+      }
+      &:after {
+        right: -55%;
+      }
+    }
+    i{
+      position: absolute;
+      top: 15px;
+      left: 120px;
+      display: block;
+      width: 10px;
+      height: 27px;
+      background: #fff;
+      opacity: 0;
+      animation: shadowMove 2.5s ease-in-out 2s infinite;
+      @keyframes shadowMove {
+        45%{
+          opacity: 0;
+          transform: skew(-20deg) translateX(0px);
+        }
+        50%{
+          opacity: .6;
+        }
+        65%{
+          opacity: 0;
+          transform: skew(-20deg) translateX(120px);
+        }
+      }
+    }
+  }
+
+  .hot_goods_list {
+    margin: 0 10px;
+    a.product {
+      display: inline-block;
+      width: 49%;
+      float: left;
+      border-radius: 10px;
+      background-color: #fff;
+      margin-top: 5px;
+      box-sizing: border-box;
+      padding: 0 8px 5px 8px;
+      box-shadow: 1px 2px 2px #E9E9E9;
+      &:active{
+        opacity: .8;
+        background-color: #e4e4e4;
+      }
+      .product_main_img {
+        position: relative;
+        width: auto;
+        height: auto;
+        margin: 0 auto;
+        box-sizing: border-box;
+        padding: 5px;
+        img{
+          display: block;
+          width: 100%;
+          height: calc((100vw - 15px)/ 2 - .6rem);
+        }
+        &:before{
+          content:'京东自营';
+          position: absolute;
+          display: block;
+          padding: 1px;
+          bottom: 0;
+          left: 0;
+          width: 24px;
+          height: 24px;
+          color: #fff;
+          font-size: 12px;
+          line-height: 12px;
+          background: -webkit-linear-gradient(bottom,#ff0200,#ff4646);
+        }
+        &:after{
+          content: '';
+          position: absolute;
+          bottom: -2px;
+          left:0;
+          width: 0;
+          height: 0;
+          border-left: 13px solid transparent;
+          border-right: 13px solid transparent;
+          border-top: 2px solid #ff0200;
+
+        }
+      }
+      .product_main_title {
+        position: relative;
+        font-size: 14px;
+        line-height: 20px;
+        box-sizing: border-box;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+        color: #4a4a4a;
+        height: 58px;
+
+
+        /*        span.self_support{
+                  display: inline-block;
+                  padding: 2px;
+                  line-height: 12px;
+                  background: -webkit-linear-gradient(left,#ff0200,#ff4646);
+                  color: #fff;
+                  border-radius: 4px;
+                  font-size: 12px;
+                  margin-right: 2px;
+                }*/
+      }
+      .product_main_price {
+        margin-top: 5px;
+        box-sizing: border-box;
+        width: 100%;
+        overflow: hidden;
+        .price {
+          color: #ff4646;
+          font-size: 16px;
+          margin-right: 10px;
+          white-space: nowrap;
+          text-align: left;
+        }
+        .praise {
+          position: relative;
+          font-size: 12px;
+          color: #ababab;
+          white-space: nowrap;
+          text-align: right;
+          span {
+            font-size: 14px;
+          }
+          &:after{
+            content: '';
+            position: absolute;
+            top: 5px;
+            left: -5px;
+            height: 12px;
+            border-left: 1px solid #ddd;
+            color: #ddd;
+            transform: scaleX(.4);
+          }
+        }
+      }
+      &:nth-child(2n){
+        margin-left: 3px;
+      }
+      &:nth-child(2n+1){
+        margin-right: 3px;
+      }
+    }
+    &:after {
+      content: '';
+      display: block;
+      clear: both;
+      visibility: hidden;
+    }
+  }
+
+}
