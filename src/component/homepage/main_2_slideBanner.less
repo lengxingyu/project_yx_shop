@@ -1,0 +1,123 @@
+.jf_homepage_autoplay {
+  width: 100%;
+  display: block;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 2px 3px #E9E9E9;
+}
+
+.jf_homepage_autoplay .jf_autoplay_images {
+  width: 100%;
+  height: calc(~"100vw / 750 * 348");
+  display: flex;
+  transition: transform .3s;
+  box-sizing: content-box;
+  transform: translate3d(0, 0, 0);
+}
+
+.jf_homepage_autoplay .jf_autoplay_images:after {
+  content: '';
+  display: block;
+  clear: both
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a {
+  width: 100%;
+  display: none;
+  position: relative;
+  padding: 0;
+  margin: 0;
+  line-height: 0;
+  flex-shrink: 0;
+  transform: translate3d(0, 0, 0);
+  transition: transform .3s ease-in-out , opacity .1s;
+
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a.delay {
+  transition: transform 0s , opacity 0s;
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a.show, .jf_homepage_autoplay .jf_autoplay_images a.show:first-child {
+  display: inline-block;
+  position: relative;
+  z-index: 10
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a:first-child {
+  display: inline-block;
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 0
+}
+
+.jf_homepage_autoplay .jf_autoplay_images.jf_autoplay_init a:first-child {
+  position: relative
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a.before, .jf_homepage_autoplay .jf_autoplay_images a.before:first-child {
+  display: block;
+  position: absolute;
+  left: -100%;
+  z-index: 5
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a.after, .jf_homepage_autoplay .jf_autoplay_images a.after:first-child {
+  display: block;
+  position: absolute;
+  left: 100%;
+  z-index: 5
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a.move, .jf_homepage_autoplay .jf_autoplay_images a.move:first-child {
+  transform: translate3d(-100%, 0, 0);
+}
+
+.jf_homepage_autoplay .jf_autoplay_images a.move_left, .jf_homepage_autoplay .jf_autoplay_images a.move_left:first-child {
+  transform: translate3d(100%, 0, 0);
+}
+
+.jf_homepage_autoplay .jf_autoplay_images img {
+  width: 100%;
+  height: calc(~"100vw / 750 * 348");
+
+}
+
+.jf_homepage_autoplay .jf_pagination {
+  position: absolute;
+  z-index: 10;
+  bottom: 18px;
+  left: 0;
+  height: 10px;
+  width: 100%;
+  text-align: center
+}
+
+.jf_homepage_autoplay .jf_pagination span {
+  padding: 0 3px
+}
+
+.jf_homepage_autoplay .jf_pagination span:after {
+  content: '';
+  display: inline-block;
+  width: 6px;
+  height: 6px;
+  margin: 0 2px;
+  text-align: center;
+  color: #202329;
+  background-color: #202329;
+  opacity: .4;
+  transition: opacity .2s ease-in-out;
+  border-radius: 50%;
+}
+
+.jf_homepage_autoplay .jf_pagination span.active:after {
+  opacity: 1
+}
+
+.wechat_main_homepage .weui_grids_kj .weui_grid {
+  width: 25%;
+  padding-top: .8rem;
+  padding-bottom: .8rem
+}

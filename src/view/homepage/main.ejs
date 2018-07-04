@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <%- include('../../component/basic/metaNormal.ejs') %>
+    <title>嘉福京东购物平台</title>
+</head>
+<body>
+<!-- 顶部搜索导航 -->
+<%- include('../../component/homepage/main_1_topSearchNav.ejs') %>
+<!-- 轮播 banner -->
+<%- include('../../component/homepage/main_2_slideBanner.ejs') %>
+<!-- 公告 -->
+<%- include('../../component/homepage/main_3_noticeBoard.ejs') %>
+<!-- 秒杀 -->
+<%- include('../../component/homepage/main_6_seckill.ejs') %>
+<!-- 我关注的 -->
+<%- include('../../component/homepage/main_4_followGoods.ejs') %>
+<!-- 热卖商品 -->
+<%- include('../../component/homepage/main_5_productList.ejs') %>
+
+<!-- 底部导航 -->
+
+<%- include('../../component/common/bottomTabBar.ejs',{
+"tabone":true,
+"tabtwo":false,
+"tabthree":false,
+"tabfour":false
+}) %>
+</body>
+
+
+</html>

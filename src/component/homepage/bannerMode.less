@@ -1,0 +1,352 @@
+.JD_banner_template {
+  width: 100%;
+  display: block;
+  position: relative;
+
+  .banner_tab {
+    position: absolute;
+    /* left:-2%;*/
+    top: 5%;
+    z-index: 2;
+    width: 50%;
+    height: 30px;
+
+    &:after {
+      content: " ";
+      display: block;
+      top: -4%;
+      right: -1%;
+      position: absolute;
+      border-top: 16px solid transparent;
+      border-bottom: 16px solid transparent;
+    }
+
+    .banner_tab_text {
+      font-size: 18px;
+      color: white;
+      text-align: center;
+      height: 100%;
+      line-height: 30px;
+
+      @media screen and (max-width: 376px) {
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  .banner_paster {
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 3;
+    img {
+      z-index: 6;
+      width: 100%;
+    }
+  }
+  .banner_theme {
+    position: absolute;
+    z-index: 2;
+  }
+
+  .banner_background {
+    width: 100%;
+    line-height: 0;
+    img {
+      width: 100%;
+      height: calc(100vw / 800 * 372);
+
+    }
+
+  }
+
+  //粉色模块
+  & > .banner_tab.pink {
+    background: linear-gradient(left, #eb4a86, #ea355d);
+  }
+  & > .banner_tab.pink:after {
+    border-right: 18px solid #ffeff5;
+  }
+  & > .banner_theme.pink {
+    img {
+      width: calc(32vw);
+      height: calc(32vw);
+    }
+
+  }
+
+  //蓝色模块
+  & > .banner_tab.blue {
+    background: linear-gradient(left, #58bcf5, #4192f2);
+  }
+  & > .banner_tab.blue:after {
+    border-right: 18px solid #f3f9ff;
+  }
+  & > .banner_theme.blue {
+    img {
+      width: calc(31vw);
+      height: calc(31vw);
+    }
+
+  }
+
+  //紫色模块
+  & > .banner_tab.purple {
+    background: linear-gradient(left, #c86af7, #8c43f6);
+  }
+  & > .banner_tab.purple:after {
+    border-right: 18px solid #f6e4f0;
+  }
+  & > .banner_theme.purple {
+    img {
+      width: calc(36vw);
+      height: calc(33vw);
+    }
+
+  }
+
+  //-----------------------------------17-8-11 更新
+  //粉色模块-新-17-8-11
+  & > .banner_tab.pink1 {
+    background: linear-gradient(left, #f683b5, #f65c9f);
+  }
+  & > .banner_tab.pink1:after {
+    border-right: 18px solid #fff;
+  }
+  & > .banner_theme.pink1 {
+    img {
+      width: calc(25vw);
+      height: calc(25vw);
+    }
+
+  }
+
+  //深绿色模块-新-17-8-11
+  & > .banner_tab.dark_green {
+    background: linear-gradient(left, #0d8d36, #00531b);
+  }
+  & > .banner_tab.dark_green:after {
+    border-right: 18px solid #3b8252;
+  }
+  & > .banner_theme.dark_green {
+    img {
+      width: calc(24vw);
+      height: calc(24vw);
+    }
+
+  }
+
+  //黄色模块-新-17-8-11
+  & > .banner_tab.yellow {
+    background: linear-gradient(left, #84ccc9, #13afa8);
+  }
+  & > .banner_tab.yellow:after {
+    border-right: 18px solid #fcf8ea;
+  }
+  & > .banner_theme.yellow {
+    img {
+      width: calc(28.4vw);
+      height: calc(28.4vw);
+    }
+
+  }
+
+  //肉色模块-新-17-8-11
+  & > .banner_tab.flesh {
+    background: linear-gradient(left, #c6da66, #afcc26);
+  }
+  & > .banner_tab.flesh:after {
+    border-right: 18px solid #fff7ea;
+  }
+  & > .banner_theme.flesh {
+    img {
+      width: calc(24vw);
+      height: calc(24vw);
+    }
+
+  }
+
+  //深蓝绿模块-新-17-8-11
+  & > .banner_tab.deongaree {
+    background: linear-gradient(left, #ebb04c, #ed9a0f);
+  }
+  & > .banner_tab.deongaree:after {
+    border-right: 18px solid #0098a6;
+  }
+  & > .banner_theme.deongaree {
+    img {
+      width: calc(21.6vw);
+      height: calc(21.6vw);
+    }
+
+  }
+
+  //薄荷绿模块-新-17-8-11
+  & > .banner_tab.mintgreen {
+    background: linear-gradient(left, #92c786, #81cb70);
+  }
+  & > .banner_tab.mintgreen:after {
+    border-right: 18px solid #cae4c4;
+  }
+  & > .banner_theme.mintgreen {
+    img {
+      width: calc(19vw);
+      height: calc(19vw);
+    }
+
+  }
+
+  //紫色模块-新-17-8-11
+  & > .banner_tab.purple1 {
+    background: linear-gradient(left, #99ace1, #839ad8);
+  }
+  & > .banner_tab.purple1:after {
+    border-right: 18px solid #cbd1e1;
+  }
+  & > .banner_theme.purple1 {
+    img {
+      width: calc(28.3vw);
+      height: calc(28.3vw);
+    }
+
+  }
+
+  //粉色模块--18-5-5
+
+  .banner_money {
+    width: 26%;
+    height: 20%;
+    padding-top: 2%;
+    border-radius: 4px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (max-width: 376px) {
+      font-size: 16px;
+    }
+
+
+    .banner_money_txt {
+      font-size: 14px;
+      color: white;
+      text-align: center;
+      height: 100%;
+      line-height: 8px;
+
+      @media screen and (max-width: 376px) {
+        font-size: 12px;
+      }
+
+    }
+    .txt_JD {
+
+      font-size: 12px;
+
+      opacity: .7;
+      &:after {
+        content: '';
+        position: absolute;
+        width: 90%;
+        height: 1px;
+        bottom: 30%;
+        background: #FFFFFF;
+        left: 4px;
+
+      }
+    }
+
+
+  }
+  //粉色
+  .money_pink{
+    background: linear-gradient(left, #eb4a86, #ea355d);
+    position: absolute;
+    //bottom: 0%;
+    //left: 20%;
+    top:7%;
+
+    right: 3%;
+
+
+    z-index: 4;
+  }
+
+  //蓝色
+  .money_blue{
+    background: linear-gradient(left, #58bcf5, #4192f2);
+    position: absolute;
+    bottom: 14%;
+    left: 67%;
+    z-index: 4;
+  }
+
+  //粉色1
+  .money_pink1{
+    background: linear-gradient(left, #f683b5, #f65c9f);
+    position: absolute;
+    bottom: 3%;
+    left: 17%;
+    z-index: 4;
+  }
+
+
+  //绿色-橙色
+  .money_dark_green{
+    background: rgb(58,130,82);
+    //background: linear-gradient(right, #174C38, #3D9976);
+    position: absolute;
+    bottom:48%;
+    right:5%;
+    z-index: 4;
+  }
+
+  //黄色
+  .money_yellow{
+    background: linear-gradient(left, #84ccc9, #13afa8);
+    position: absolute;
+    top:22%;
+    left: 58%;
+    z-index: 4;
+  }
+
+  //肉色
+  .money_flesh{
+    background: linear-gradient(left, #c6da66, #afcc26);
+    position: absolute;
+    top:25%;
+    left: 16%;
+    z-index: 4;
+  }
+
+  //深蓝绿
+  .money_deongaree{
+    background: linear-gradient(left, #ebb04c, #ed9a0f);
+    position: absolute;
+    top:30%;
+    left: 2%;
+    z-index: 4;
+  }
+
+  //薄荷绿
+  .money_mintgreen{
+    background: linear-gradient(left, #92c786, #81cb70);
+    position: absolute;
+    bottom:4%;
+    left: 21%;
+    z-index: 4;
+  }
+
+  //紫色
+  .money_purple1{
+    background: linear-gradient(left, #99ace1, #839ad8);
+    position: absolute;
+    top:25%;
+    left: 13%;
+    z-index: 4;
+  }
+}

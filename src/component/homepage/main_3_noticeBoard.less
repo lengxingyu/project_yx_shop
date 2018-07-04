@@ -1,0 +1,59 @@
+.homepage_notice_board{
+
+  background-color: #fff;
+  width: 100%;
+
+  .notice_title{
+    width: 100%;
+    margin: 5px 10px;
+
+    .yx_main_title {
+      margin: 10px 0;
+      img {
+        width: 100%;
+      }
+    }
+
+
+    .notice_content{
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin-bottom: 10px;
+      box-sizing: border-box;
+
+      .notice_list{
+        overflow-y: scroll;
+        -webkit-overflow-scrolling: touch;
+
+        .seckill_merchant{
+
+          color:#4a4a4a;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-direction: column;
+          background: #fff;
+          height: 100%;
+          width: 26%;
+          -webkit-flex-shrink: 0;
+          flex: 0 0 auto;
+
+          &:active{
+          color: #4a4a4a;
+          }
+
+          .seckill_image{
+            img{
+              width: 50px;
+              height: 50px;
+            }
+          }
+        }
+
+      }
+
+    }
+
+  }
+}

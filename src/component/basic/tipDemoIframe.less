@@ -1,0 +1,125 @@
+
+button#btnTest {
+
+  width: 100%;
+  height: 50px;
+  display: block;
+  margin: 10px 0;
+}
+
+
+  .iframe_main{
+    display:none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px 10px 0 0;
+    background: #fff;
+    z-index: 1000;
+    transform: translate3d(0,120%,0);
+    transition: transform .3s;
+
+
+    .iframe_top{
+
+      .iframe_title{
+        text-align: center;
+        padding: 10px 15px;
+        font-size: 16px;
+      }
+      .iframe_cancel{
+        position: absolute;
+        right: 0;
+        top: 0;
+        width: 50px;
+        height: 50px;
+        &:before,&:after{
+          content: '';
+          width: 16px;
+          height: 1px;
+          background: black;
+          display: block;
+          position: absolute;
+          right: 10px;
+          top: 25px;
+        }
+        &:before{
+
+          transform: rotate(-45deg);
+        }
+
+        &:after{
+          transform: rotate(45deg);
+        }
+      }
+      .iframe_line{
+
+        margin: 0 10px;
+        border-top: 1px solid #ababab;
+        box-sizing: border-box;
+        transform-origin: 0 0;
+        transform: scaleY(0.5);
+      }
+
+
+    }
+
+
+    div.iframebox{
+
+      width: 100%;
+      height: calc(100vh);
+      overflow: auto;
+      -webkit-overflow-scrolling: touch;
+
+      #iframe {
+
+        display: block;
+        margin: 0;
+        padding: 0;
+        border: 0;
+
+      }
+    }
+
+
+    .prompt_seckill_btn{
+      position: absolute;
+      bottom: 0;
+      padding: 15px;
+      width: 100%;
+      background: #fff;
+      box-sizing: border-box;
+
+      .product_prompt_btn{
+        position: relative;
+        display: block;
+        width: 100%;
+        height: 40px;
+        color: #ff0200;
+        text-align: center;
+        font-size: 16px;
+        line-height: 40px;
+        border: 1px solid #ff4646;
+        border-radius: 8px;
+        &:active{
+          opacity: .6;
+        }
+      }
+    }
+
+  }
+
+
+
+
+
+.iframe_main.show{
+
+  transform: translate3d(0,0,0);
+
+}
+
+

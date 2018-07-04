@@ -1,0 +1,159 @@
+<div class="homepage_product_list">
+    <div class="hot_goods_title">
+        <div><img src="../../images/product_hot_icon.png">热卖<span>宝贝</span></div>
+        <i></i>
+    </div>
+
+    <div class="hot_goods_list">
+        <!-- goods 1-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_1.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title"><!--<span class="self_support">京东自营</span>-->小米(MI)Air 13.3英寸全金属超轻薄笔记本电脑(i5-6200U 8G 256G PCIE固态硬盘 940MX独显 FHD WIN10)银</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥14999.00</span><span class="praise"><span>99%</span>好评</span></div>
+        </a>
+        <!-- goods 2-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_2.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title">Apple iPhone 7 Plus 128G 红色特别版 移动联通电信4G手机</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥598.00</span><span class="praise"><span>97.9%</span>好评</span></div>
+        </a>
+        <!-- goods 3-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_3.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title">indle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥4999.00</span><span class="praise"><span>99%</span>好评</span></div>
+        </a>
+        <!-- goods 4-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_4.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title">雅萌(YA-MAN) 美容器 LED导入导出射频美容仪清洁毛孔洁面仪 yaman HRF-11</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥4399.00</span><span class="praise"><span>100%</span>好评</span></div>
+        </a>
+        <!-- goods 1-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_1.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title"><!--<span class="acc">附</span><span class="gift">赠</span>-->小米(MI)Air 13.3英寸全金属超轻薄笔记本电脑(i5-6200U 8G 256G PCIE固态硬盘 940MX独显 FHD WIN10)银</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥4999.00</span><span class="praise"><span>99%</span>好评</span></div>
+        </a>
+        <!-- goods 2-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_2.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title">Apple iPhone 7 Plus 128G 红色特别版 移动联通电信4G手机</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥598.00</span><span class="praise"><span>97.9%</span>好评</span></div>
+        </a>
+        <!-- goods 3-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_3.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title">Kindle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥4999.00</span><span class="praise"><span>99%</span>好评</span></div>
+        </a>
+        <!-- goods 4-->
+        <a class="product" href="../jdshop_product/product.html">
+            <div class="product_main_img"><img data-src="../../images/product_list_4.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+            <div class="product_main_title">雅萌(YA-MAN) 美容器 LED导入导出射频美容仪清洁毛孔洁面仪 yaman HRF-11</div>
+            <div class="product_main_price jdshop_alignment_center"><span class="price">￥4399.00</span><span class="praise"><span>100%</span>好评</span></div>
+        </a>
+    </div>
+
+</div>
+
+<script>
+
+    /*图片懒加载*/
+    jfLazyLoading.lazyLoadInit({
+
+        "bottomDistance":"50"//距离底部的距离，触发事件，单位省略
+    })
+
+
+    //异步加载
+    jfLazyLoading.ajaxLoadInit({
+
+        "bottomDistance":"50",//距离底部的距离，触发事件，单位省略
+
+        fn:function(){//触发的脚本
+
+            jfLazyLoading.ajaxContentInit({//触发的脚本(动态添加元素)
+
+                productdata:
+                    [
+                        {   "data_href":"javascript:",//a标签的href属性值
+                            "loading_src":"../../images/img_loading.gif",//图片预加载的地址
+                            "data_src":"../../images/product_list_1.jpg",//图片真实地址
+                            /*     "acc_text":true,//是否附加
+                                 "gift_text":true,//是否赠品*/
+                            "product":"小米(MI)Air 13.3英寸全金属超轻薄笔记本电脑(i5-6200U 8G 256G PCIE固态硬盘 940MX独显 FHD WIN10)银",//商品描述
+                            "price_text":"4999.00",//商品价格
+                            "praise":"99%"//好评率
+                        },
+
+                        {
+                            "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_2.jpg",
+                            "product":"Apple iPhone 7 Plus 128G 红色特别版 移动联通电信4G手机",
+                            "price_text":"598.00",
+                            "praise":"99.9%"
+                        },
+
+                        {
+                            "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_3.jpg",
+                            "product":"Kindle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色",
+                            "price_text":"4999.00",
+                            "praise":"99%"
+                        },
+
+                        {   "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_4.jpg",
+                            "product":"雅萌(YA-MAN) 美容器 LED导入导出射频美容仪清洁毛孔洁面仪 yaman HRF-11",
+                            "price_text":"4399.00",
+                            "praise":"88.5%"
+                        },
+                        {   "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_1.jpg",//图片地址
+                            "product":"小米(MI)Air 13.3英寸全金属超轻薄笔记本电脑(i5-6200U 8G 256G PCIE固态硬盘 940MX独显 FHD WIN10)银",//商品描述
+                            "price_text":"4999.00",//商品价格
+                            "praise":"99%"//好评率
+                        },
+
+                        {   "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_2.jpg",
+                            "product":"Apple iPhone 7 Plus 128G 红色特别版 移动联通电信4G手机",
+                            "price_text":"598.00",
+                            "praise":"99.9%"
+                        },
+
+                        {   "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_3.jpg",
+                            "product":"Kindle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色",
+                            "price_text":"4999.00",
+                            "praise":"99%"
+                        },
+
+                        {
+                            "data_href":"javascript:",
+                            "loading_src":"../../images/img_loading.gif",
+                            "data_src":"../../images/product_list_4.jpg",
+                            "product":"雅萌(YA-MAN) 美容器 LED导入导出射频美容仪清洁毛孔洁面仪 yaman HRF-11",
+                            "price_text":"4399.00",
+                            "praise":"88.5%"
+                        }
+
+                    ]
+
+            })
+
+        }
+
+
+
+    })
+
+
+</script>
