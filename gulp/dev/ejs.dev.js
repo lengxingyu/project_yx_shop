@@ -10,7 +10,7 @@ var gulp = require('gulp'),
 
     connect = require('gulp-connect'),//服务器
 
-    rename = require("gulp-rename");//重命名
+    rename = require("gulp-rename"),//重命名
 
      bom=require("gulp-bom")
 
@@ -37,7 +37,7 @@ function devEjs(){
 
                 addHtml += "<meta name='format-detection' content='telephone=no, email=no' />\n";
 
-                addHtml += "<link rel='stylesheet'  href='../../css/demo.css'/>\n";
+                addHtml += "<link rel='stylesheet'  href='../../css/jdShopMain.css'/>\n";
 
                 $('head').prepend(addHtml);
 
@@ -56,7 +56,7 @@ function devEjs(){
 
         .pipe(cheerio(function($){
 
-            var addJsMain = '\n<script src="../js/jquery-3.0.0.min.js"></script>\n<script src="../js/demo.js"></script>\n';//主要的脚本文件
+            var addJsMain = '\n<script src="../../js/jquery-3.0.0.min.js"></script>\n<script src="../../js/jdShopMain.js"></script>\n';//主要的脚本文件
             var addJsHtml="";
 
             var addJsRun="<script>\n";

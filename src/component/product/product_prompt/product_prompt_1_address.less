@@ -1,0 +1,105 @@
+#jd_address_select{
+
+  height: calc(60vh);
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+
+  p{
+    padding: 8px 10px;
+    font-size: 14px;
+
+    &.p_show{
+
+      position: relative;
+      color: #c91623;
+
+      &:after{
+        content: '';
+        width: .5rem;
+        height: .25rem;
+        display: inline-block;
+        background: 0 0;
+        border: 1px solid #ff4646;
+        border-top: 0;
+        border-right: 0;
+        z-index: 2;
+        border-radius: 0;
+        transform: rotate(-45deg) translate3d(.5rem,0,0);
+      }
+
+
+    }
+  }
+
+  div.top_address{
+    font-size: 12px;
+
+    height: 35px;
+
+    overflow: hidden;
+
+    border-bottom: 1px solid #ddd;
+
+    &>div{
+
+      padding: 5px 5px;
+
+      margin: 0 5px;
+
+      white-space: nowrap;
+
+      &.show{
+
+        color: #c91623;
+
+        border-bottom: #c91623 1px solid;
+
+        &~div{
+
+          display: none;
+
+        }
+
+      }
+
+    }
+
+
+  }
+
+
+  /*地址选择*/
+
+  .address{
+    position: absolute;
+
+    left: 0;
+
+    top: 45px;
+
+    overflow: auto;
+
+    width: 100%;
+
+    height: calc( ~'60vh - 35px');
+
+    transform: translate3d(-100%,0,0);
+
+    transition: transform .3s .2s;
+
+    &.show{
+
+      transform: translate3d(0,0,0);
+
+    }
+
+    &.show ~ .address{
+
+      transform: translate3d(100%,0,0);
+
+    }
+
+  }
+
+}
