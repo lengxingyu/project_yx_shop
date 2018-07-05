@@ -32,7 +32,7 @@ function lessDev(){
             remove: true //是否去掉不必要的前缀 默认：true
 
         }))
-        .pipe(concat('demo.css'))
+        .pipe(concat('jdShopMain.css'))
 
         .pipe(gulp.dest('build/css'))
         .pipe(connect.reload())

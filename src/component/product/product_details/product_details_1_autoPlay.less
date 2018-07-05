@@ -1,0 +1,217 @@
+
+
+.product_autoPlay{
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+
+}
+
+
+.product_details_autoPlay{
+    width: 100%;
+    height: calc(100vw);
+    position: relative;
+    transform:translateX(0);
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+
+    .jd_banner_touch{
+
+      transform: scale3d(1,1,1);
+      transform-origin: 50% 50%;
+
+      &.move{
+
+        transition: transform .2s;
+      }
+    }
+
+    &.contentchange{
+      transition: all 0.2s linear;
+    }
+
+    &>div{
+      width: 100%;
+      text-align: center;
+      height: 100%;
+      flex-shrink: 0;
+
+      &:last-child{
+        position: relative;
+
+        &:after{
+          content: "释放即可查看图文详情";
+          display: block;
+          margin-left: 20px;
+          position: absolute;
+          right: -40px;
+          top: 0;
+          text-align: center;
+          writing-mode: vertical-lr;
+          letter-spacing: 4px;
+          height: 100%;
+        }
+      }
+
+
+
+      img{
+        width: 100%;
+        box-shadow: 0 2px 3px #E9E9E9;
+      }
+    }
+
+
+
+
+  }
+
+
+.allpoint{
+  width: 100%;
+  position: absolute;
+  bottom: 10px;
+  left: 0;
+  text-align: center;
+
+
+  span{
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    margin: 0 5px;
+    border-radius: 50%;
+    background: #dddddd;
+    transition: all 0.3s linear;
+  }
+
+  .showpoint{
+    background: #ff4646;
+  }
+}
+
+
+.product_show_content{
+  display: none;
+  width: 100%;
+  height: 100%;
+
+  .img_content{
+    width: 100%;
+    height: 100%;
+
+    position: absolute;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    z-index: 1000;
+    overflow: hidden;
+
+    .product_details_autoPlay{
+      width: 100%;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      transform:translateX(0);
+      position: relative;
+
+
+      .jd_banner_touch{
+
+        transform: scale3d(1,1,1);
+
+        transform-origin: 50% 50%;
+
+        &.move{
+
+          transition: transform .2s;
+        }
+      }
+
+
+
+      &.contentchange{
+        transition: all 0.2s linear;
+      }
+
+      &>div{
+        width: 100%;
+        text-align: center;
+        height: 100%;
+        flex-shrink: 0;
+
+
+        img{
+          width: 100%;
+          margin: 0 auto;
+          height: calc(55vh);
+          box-shadow: none;
+
+        }
+      }
+    }
+
+  }
+
+  .allpoint{
+    width: 100%;
+    position: fixed;
+    bottom: 40px;
+    left: 0;
+    z-index: 1000;
+    text-align: center;
+
+
+
+    span{
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      margin: 0 5px;
+      border-radius: 50%;
+      background: white;
+      transition: all 0.3s linear;
+    }
+
+    .showpoint{
+      background: #ff4646;
+    }
+
+
+
+  }
+
+  .showimg_shadow{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 900;
+    background:#4a4a4a;
+  }
+
+  .delete_banner{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    color: white;
+    z-index: 1000;
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    background: #ababab;
+    border-radius: 50%;
+  }
+}
+
+
+
+
+

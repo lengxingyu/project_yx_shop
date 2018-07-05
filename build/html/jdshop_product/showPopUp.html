@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no, email=no">
+<link rel="stylesheet" href="../../css/jdShopMain.css">
+
+    <!--通用媒体查询-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+
+
+
+    <title>嘉福京东购物平台</title>
+</head>
+
+<body>
+
+<style>
+
+    button{
+
+        display: block;
+        height:150px;
+        width:150px;
+
+    }
+
+</style>
+
+<button onclick="show1.show()">点击展开1</button>
+
+<button onclick="show2.show()">点击展开2</button>
+
+
+<div class="jf_pop_up" id="demo1">
+
+    <div class="jf_pop_up_main">
+
+        <div class="pop_top">
+
+            <div class="pop_title">请选择1</div>
+
+            <div class="pop_cancel"></div>
+
+            <div class="pop_line"></div>
+
+        </div>
+
+        <div class="pop_main">
+
+        </div>
+
+    </div>
+
+    <div class="jf_pop_up_bg">
+
+    </div>
+
+</div>
+
+<div class="jf_pop_up" id="demo2">
+
+    <div class="jf_pop_up_main">
+
+        <div class="pop_top">
+
+            <div class="pop_title">请选择2</div>
+
+            <div class="pop_cancel"></div>
+
+            <div class="pop_line"></div>
+
+        </div>
+
+        <div class="pop_main">
+
+        </div>
+
+    </div>
+
+    <div class="jf_pop_up_bg">
+
+    </div>
+
+</div>
+
+
+
+
+<script src="../../js/jquery-3.0.0.min.js"></script>
+<script src="../../js/jdShopMain.js"></script>
+<script>
+
+
+    show1=new jfShowPop({'ele':'demo1'})
+
+    show2=new jfShowPop({'ele':'demo2'})
+
+
+
+</script>
+</body>
+
+</html>

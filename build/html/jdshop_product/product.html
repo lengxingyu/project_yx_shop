@@ -1,0 +1,895 @@
+<!DOCTYPE html>
+<html lang="en">
+<head><link rel="stylesheet" href="../../css/bootstrap.min.css">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<meta name="format-detection" content="telephone=no, email=no">
+<link rel="stylesheet" href="../../css/jdShopMain.css">
+
+    <!--通用媒体查询-->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1">
+
+
+
+    <title>商城详情</title>
+</head>
+
+<body>
+
+
+<nav class="top_product_bar">
+    <div class="tab_box"></div>
+
+    <div class="product_nav_contain">
+
+        <a class="left" onclick="window.history.go(-1)">
+            <p><img src="../../images/nav_go_back.png"></p>
+        </a>
+
+        <div class="content">
+
+            <div class="nav_tab choose_tab" onclick="jfProductDetails.scrollEle(document.getElementsByClassName('product_autoPlay')[0],45)">商品
+            </div>
+
+            <div class="nav_tab" onclick="jfProductDetails.scrollEle(document.getElementById('NavTab'),45)">图文
+            </div>
+        </div>
+
+        <a class="right">&nbsp;</a>
+    </div>
+</nav>
+
+
+
+<div class="product_details">
+
+    <!--主图轮播-->
+<div class="product_autoPlay">
+
+    <!--图片部分-->
+    <div class="product_details_autoPlay ">
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_1.jpg"></div>
+        </div>
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_2.jpg"></div>
+        </div>
+        <div class="jdshow_center_center">
+
+            <div class="jd_banner_touch"><img src="../../images/product_list_3.jpg"></div>
+        </div>
+        <div class="jdshow_center_center">
+            <div class="jd_banner_touch"><img src="../../images/product_list_4.jpg"></div>
+        </div>
+    </div>
+
+    <!--点点部分——自动生成-->
+
+</div>
+
+<div class="product_show_content">
+
+    <!--主体内容-->
+    <div class="img_content">
+        <!--图片-->
+        <div class="product_details_autoPlay"></div>
+    </div>
+
+    <!--遮罩层-->
+    <div class="showimg_shadow"></div>
+
+    <div class="delete_banner">X</div>
+
+</div>
+
+
+
+
+    <!--主要信息-->
+<div class="product_details_main">
+    <!-- 商品名称及好评-->
+<div class="product_title jdshop_alignment_center">
+    <div class="product_name">Apple MacBook Air 笔记本(Core i5处理器/8GB内存128GB SSD闪存 处理器)Apple MacBook Air 笔记本(Core i5处理器/8GB内存128GB SSD闪存 处理器)
+    </div>
+    <div class="product_praise">
+        <p><span>97%</span>好评</p>
+        <p>数据来自京东</p>
+    </div>
+</div>
+    <!-- 商品价格及附件赠品-->
+    <div class="product_imf jdshop_alignment_left ">
+
+        <div class="product_price">￥<span>6700.00</span></div>
+        <span class="view_jd" id="view_jd" data-src="https://item.m.jd.com/product/10211831816.html" onclick="showProductIframe.show()">看京东价</span>
+
+    </div>
+
+</div>
+
+
+
+
+    <!--sku选择-->
+<div class="product_details_sku jdshop_alignment_top" onclick="showProductSku.show()">
+    <!-- 已选sku -->
+    <div class="choose_sku">
+        <div class="details_sku jdshop_alignment_left">
+            <div>已选</div>
+            <div>标配版，13.3英寸I5/8GB/128G/GF2银色，1件，增值服务</div>
+        </div>
+    </div>
+    <!-- 小点点 -->
+    <div class="choose_point">
+        <img src="../../images/product_details_9_edit.png">
+    <!--    <i>•</i>
+        <i>•</i>
+        <i>•</i>-->
+    </div>
+</div>
+
+    <!--地址选择模块-->
+<div class="product_details_address jdshop_alignment_center" onclick="productAddress.show({fn:
+
+function(){
+
+     addressChoose.run({
+     yourUrl:'http://jd-test.jia-fu.cn',
+     type: 'get',
+     targetDom:document.getElementById('product_address_show'),
+     fn:function() {
+       productAddress.hide();
+     }
+
+     })
+}
+
+})">
+    <!-- 已选地址-->
+    <div class="choose_address">
+        <div class="details_address">
+            <div><span>送至</span><img src="../../images/product_details_1_location.png"><span id="product_address_show">北京市，朝阳区，四环以内北京市，朝阳区，四环以内北京市 朝阳区 四环以内北京市 朝阳区 四环以内</span></div>
+        </div>
+    </div>
+    <!-- 有无货 -->
+    <div class="details_stock"><span class="in_stock">有货</span><img src="../../images//product_go.png"></div>
+    </div>
+
+
+    <!-- 配送时间-->
+<div class="product_details_time jdshop_alignment_top">
+    <div><img src="../../images/product_details_8_time.png"></div>
+    <div class="time">18:00前下单，预计明天(<span>07月25日</span>)送达</div>
+</div>
+
+    <!--利益点-->
+<div class="product_details_advantage jdshop_alignment_center">
+    <!-- 售后 -->
+    <div><span></span>京东发货&售后</div>
+    <!-- 免运费 -->
+    <div><span></span>满99元包邮，无续重运费</div>
+
+    <!-- 七天无理由 -->
+    <div class="sale_problem"><span></span>7天无理由退货</div>
+
+    <!-- 七天无理由 -->
+    <!--<div class="nonsupport_sale_problem"><p></p>不支持7天无理由</div>-->
+
+</div>
+
+    
+
+    <!--附件赠品-->
+<div class="product_details_enclosure">
+    <!-- 附件 -->
+    <div class="product_details_acc">
+        <!-- 附件 title -->
+        <div class="details_acc_title jdshop_alignment_center">
+            <span class="acc_title">附件</span>
+            <div class="acc_tips">注：因促销活动随时变化，以下单时为准。</div>
+        </div>
+        <!-- list 1-->
+        <div class="details_contain_acc" onclick="showProductAcc.show()">
+    <div class="details_acc_goods jdshop_alignment_left">
+        <div class="goods_pic"><img data-src="../../images/product_list_3.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+        <div class="goods_box">
+            <div class="goods_title">Kindle Paperwhite 全新升级版6英</div>
+            <div class="goods_term">(购买2件及以上，赠完即止)</div>
+            <div class="goods_num jdshop_alignment_center">
+                <p>×<span>1</span></p>
+                <p>京东参考价：￥<span>8888.00</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- list 2-->
+        <div class="details_contain_acc" onclick="showProductAcc.show()">
+    <div class="details_acc_goods jdshop_alignment_left">
+        <div class="goods_pic"><img data-src="../../images/product_list_3.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+        <div class="goods_box">
+            <div class="goods_title">Kindle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色</div>
+            <div class="goods_term">(购买2件及以上，赠完即止)</div>
+            <div class="goods_num jdshop_alignment_center">
+                <p>×<span>1</span></p>
+                <p>京东参考价：￥<span>8888.00</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+    <!-- 赠品-->
+    <div class="product_details_acc">
+        <!-- 赠品 title-->
+        <div class="details_acc_title  jdshop_alignment_center">
+            <span class="gift_title">赠品</span>
+            <div class="gift_tips">注：因促销活动随时变化，以下单时为准。</div>
+        </div>
+        <!-- list 1-->
+        <div class="details_contain_acc" onclick="showProductAcc.show()">
+    <div class="details_acc_goods jdshop_alignment_left">
+        <div class="goods_pic"><img data-src="../../images/product_list_3.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+        <div class="goods_box">
+            <div class="goods_title">Kindle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色</div>
+            <div class="goods_term">(购买2件及以上，赠完即止)</div>
+            <div class="goods_num jdshop_alignment_center">
+                <p>×<span>1</span></p>
+                <p>京东参考价：￥<span>8888.00</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <!-- list 2-->
+        <div class="details_contain_acc" onclick="showProductAcc.show()">
+    <div class="details_acc_goods jdshop_alignment_left">
+        <div class="goods_pic"><img data-src="../../images/product_list_3.jpg" src="../../images/img_loading.gif" class="loading_img"></div>
+        <div class="goods_box">
+            <div class="goods_title">Kindle Paperwhite 全新升级版6英寸护眼非反光电子墨水触控显示屏 wifi 电子书阅读器 黑色</div>
+            <div class="goods_term">(购买2件及以上，赠完即止)</div>
+            <div class="goods_num jdshop_alignment_center">
+                <p>×<span>1</span></p>
+                <p>京东参考价：￥<span>8888.00</span></p>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+    </div>
+
+    <!---->
+
+
+</div>
+
+</div>
+
+<div class="product_images">
+
+    
+<div class="product_images_nav">
+    <!-- 向下滑动 -->
+    <div class="slide_down"><img src="../../images/product_details_4_down.png">向下进入详情页</div>
+</div>
+
+<!-- nav -->
+<div class="images_nav">
+    <div class="images_nav_tab jdshop_alignment_center" id="NavTab">
+        <a class="tab choose_tab" onclick="jfProductDetails.scrollEle(document.getElementsByClassName('product_images_description')[0],87)">图文详情</a>
+        <a class="tab" onclick="jfProductDetails.scrollEle(document.getElementsByClassName('product_images_parameter')[0],87)">规格参数</a>
+        <a class="tab" onclick="jfProductDetails.scrollEle(document.getElementsByClassName('product_images_service')[0],86)">售后相关</a>
+    </div>
+    <div class="images_nav_tab_empty" id="NavTabEmpty"></div>
+</div>
+
+
+
+    <!--图文详情-->
+<div class="product_images_description">
+
+
+<img src="../../images/product_details_3_description.jpg" data-src="../../images/product_details_3_description.jpg" class="loading_img">
+
+</div>
+
+
+
+    <div class="product_images_parameter">
+    <div class="parameter_title"><img src="../../images/product_details_5_spec.png">规格参数</div>
+    <div class="parameter_table">
+        <table border="1" cellspacing="0" cellpadding="0" bordercolor="#ddd">
+            <tr>
+                <td>商品编号</td>
+                <td>11544981492</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">主体积</td>
+            </tr>
+            <tr>
+                <td>系列</td>
+                <td>MacBook Air</td>
+            </tr>
+            <tr>
+                <td>颜色</td>
+                <td>银色</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">显示器</td>
+            </tr>
+            <tr>
+                <td>显示比例</td>
+                <td>其他比例</td>
+            </tr>
+            <tr>
+                <td>物理分辨率</td>
+                <td>其他</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">硬盘</td>
+            </tr>
+            <tr>
+                <td>硬盘容量</td>
+                <td>其他</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">内存</td>
+            </tr>
+            <tr>
+                <td>内存容量</td>
+                <td>其他</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">通讯</td>
+            </tr>
+            <tr>
+                <td>局域网</td>
+                <td>其他</td>
+            </tr>
+            <tr>
+                <td>无线局域网</td>
+                <td>其他</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">端口</td>
+            </tr>
+            <tr>
+                <td>音频端口</td>
+                <td>其他</td>
+            </tr>
+            <tr>
+                <td>无线局域网</td>
+                <td>其他</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">音效系统</td>
+            </tr>
+            <tr>
+                <td>扬声器</td>
+                <td>内置扬声器</td>
+            </tr>
+            <tr class="title">
+                <td colspan="2">输入设备</td>
+            </tr>
+            <tr>
+                <td>键盘</td>
+                <td>背光键盘</td>
+            </tr>
+            <tr>
+                <td>触摸板</td>
+                <td>有</td>
+            </tr>
+        </table>
+    </div>
+</div>
+
+    <div class="product_images_service">
+    <div class="service_title"><img src="../../images/product_details_6_service.png">相关售后</div>
+    <div class="service_clause">
+        <div class="jdshop_alignment_top">
+            <p>【关于】</p>
+            <p>嘉福京东商城是与京东平台对接的<span>嘉福子站</span>。</p>
+        </div>
+        <div class="jdshop_alignment_top">
+            <p>【货源】</p>
+            <p>商品及货源都是<span>京东自营商品</span>，并由京东发货，售后无忧。</p>
+        </div>
+        <div class="jdshop_alignment_top">
+            <p>【配送】</p>
+            <p>以京东运费标准为准，下单后<span>京东统一配送</span>。是否有偏远、超重附加费，见结算页的运费显示。</p>
+        </div>
+        <div class="jdshop_alignment_top">
+            <p>【发票】</p>
+            <p> 未能提供发票，但不影响保修售后，详见个人中心的<span>“常见问题”</span>中<span>“京东售后”</span>。</p>
+        </div>
+        <div class="jdshop_alignment_top">
+            <p>【售后】</p>
+            <p>拨打<span>京东售后电话</span><a href="tel:400-606-6866">400-606-6866</a>，告知嘉福订单详情页中的<span>“京东订单号”</span>，即可进行<span>保修、换货等</span>售后服务，与在京东商城购物售后一样</p>
+        </div>
+        <div class="jdshop_alignment_top">
+            <p>【嘉福客服】</p>
+            <p><a href="tel:400-821-6990">400-821-6990</a>（工作日9:00-17:30）</p>
+        </div>
+        <p class="end_of_shopping"><span>◎</span> 嘉福真诚期待您的到来，祝您购物愉快 <span>◎</span></p>
+    </div>
+</div>
+
+</div>
+
+<div id="product_prompt">
+
+    
+
+<div class="jf_pop_up" id="product_address">
+
+    <div class="jf_pop_up_main">
+
+        <div class="pop_top">
+
+            <div class="pop_title">请选择地址</div>
+
+            <div class="pop_cancel"></div>
+
+<!--            <div class="pop_line"></div>-->
+
+
+        </div>
+
+        <div class="pop_main">
+
+            <div class="product_prompt_address">
+
+                <div id="jd_address_select">
+
+                    <div class="top_address jdshop_alignment_middle">
+
+                        <div>请选择</div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                        <div></div>
+
+                    </div>
+
+                    <div class="address"></div>
+
+                    <div class="address"></div>
+
+                    <div class="address"></div>
+
+                    <div class="address"></div>
+
+                    <div class="address"></div>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <div class="jf_pop_up_bg">
+
+    </div>
+
+</div>
+
+
+
+
+    
+
+    <div class="jf_pop_up" id="product_prompt_acc">
+
+    <div class="jf_pop_up_main">
+
+        <div class="pop_top">
+
+            <div class="pop_title">基本信息(附件/赠品)</div>
+
+            <div class="pop_cancel"></div>
+
+            <div class="pop_line"></div>
+
+        </div>
+
+        <div class="pop_main">
+            <div class="pop_content">
+                <!-- 列表 -->
+                <div class="details_acc_goods jdshop_alignment_left out_of_stock">
+                    <div class="goods_pic"><img src="../../images/product_list_3.jpg"></div>
+                    <div class="goods_box">
+                        <div class="goods_title">Kindle Paperwhite 全新升级</div>
+                        <div class="goods_term">(购买2件及以上，赠完即止)</div>
+                        <div class="goods_num">
+                            <p>京东参考价：￥8888.00</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="details_acc_img">
+                    <div id="zbViewModulesH" value="563"></div>
+                    <input id="zbViewModulesHeight" type="hidden" value="563">
+                    <div skudesign="100010"></div>
+                    <div class="ssd-module-wrap">
+                        <div class="ssd-module M15154967832381 animate-M15154967832381"></div>
+                    </div><!-- 2018-01-09 07:28:04 -->
+                    <link rel="stylesheet" type="text/css" href="//sku-market-gw.jd.com/css/pc/6165188.css?t=1516177135976" media="all">
+                    <img src="../../images/product_details_7_acc_description.jpg">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="jf_pop_up_bg"></div>
+</div>
+
+
+
+
+
+    
+<div class="jf_pop_up" id="product_prompt_buy">
+
+        <div class="jf_pop_up_main">
+
+            <div class="pop_top">
+
+                <div class="pop_title">请选择</div>
+
+                <div class="pop_cancel"></div>
+
+                <div class="pop_line"></div>
+
+            </div>
+
+            <div class="pop_main" id="main_sku">
+                <div class="pop_content">
+                    <!-- 主图显示-->
+                    <div class="product_details_imf">
+                        <div class="product_img">
+                            <img src="../../images/product_list_1.jpg">
+                        </div>
+                        <div class="price">
+                            <div>￥4999.00</div>
+                            <div>商品编号：33445501</div>
+                        </div>
+
+
+                    </div>
+                    <!--sku 颜色-->
+                    <div class="sku_title">颜色</div>
+                    <div class="sku_contain jdshop_alignment_left">
+                        <div class="sku_box choose_tab">标配版</div>
+                        <div class="sku_box">保护套装</div>
+                        <div class="sku_box">终身保修</div>
+                        <div class="sku_box">保护套装</div>
+                        <div class="sku_box">标配版</div>
+                        <div class="sku_box">保护套装</div>
+                    </div>
+                    <!--sku 颜色-->
+                    <div class="sku_title">版本</div>
+                    <div class="sku_contain jdshop_alignment_left">
+                        <div class="sku_box choose_tab">11.6英寸</div>
+                        <div class="sku_box">13.3英寸啦啦啦啦啦娜娜</div>
+                        <div class="sku_box">14.3英寸</div>
+                        <div class="sku_box">100.3英寸</div>
+                        <div class="sku_box">13.3英寸</div>
+
+                    </div>
+                    <!--sku 选择配置-->
+                    <div class="sku_title">选择配置</div>
+                    <div class="sku_contain jdshop_alignment_left">
+                        <div class="sku_box choose_tab">双核i5/4GB内存/128GB闪存</div>
+                        <div class="sku_box">双核i5/8GB内存/128GB闪存</div>
+                        <div class="sku_box">双核i5/8GB内存/256GB闪存</div>
+                        <div class="sku_box">双核i5/8GB内存/256GB闪存</div>
+                        <div class="sku_box">双核i5/16GB内存/128GB闪存</div>
+                        <div class="sku_box">双核i5/16GB内存/256GB闪存</div>
+                        <div class="sku_box">双核i5/8GB内存/256GB闪存</div>
+                        <div class="sku_box">双核i5/8GB内存/256GB闪存</div>
+                        <div class="sku_box out_of_stock">定制款：双核i7/8GB内存/128GB闪存</div>
+                    </div>
+                </div>
+
+                <!-- line-->
+                <div class="jd_line"></div>
+
+                <!--数量-->
+                <div class="sku_volume_purchased jdshop_alignment_center">
+
+                    <div>数量</div>
+                    <div class="volume_btn">
+    <span class="reduce">－</span>
+    <input type="number" pattern="[0-9]*" class="volume_input" value="1">
+    <span class="add">＋</span>
+</div>
+
+
+
+                </div>
+
+                <div class="prompt_btn">
+                    <a class="product_prompt_btn orange hidebtn">
+                        <div>加入购物车</div>
+                    </a>
+                    <a class="product_prompt_btn red ">
+                        <div>立即购买</div>
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="jf_pop_up_bg">
+
+        </div>
+
+</div>
+
+
+
+
+    
+<!-- 弹框内容-->
+<div class="iframe_main" id="iframDemo">
+
+    <div class="iframe_top">
+
+        <div class="iframe_title">看京东价</div>
+
+        <div class="iframe_cancel"></div>
+
+        <div class="iframe_line"></div>
+
+    </div>
+
+    <!-- iframe内容-->
+
+    <div class="iframebox">
+
+        <iframe id="iframe" frameborder="0" marginheight="0" width="300" height="300" marginwidth="0" scrolling="no"></iframe>
+
+    </div>
+
+    <!-- 按钮-->
+    <!--<div class="prompt_seckill_btn">
+        <a class="product_prompt_btn" id="jumpBtn" href="">
+            <div>打开京东App，查看全部评价</div>
+        </a>
+
+    </div>-->
+
+</div>
+
+
+
+
+
+
+</div>
+
+<footer class="bottom_product_tabbar">
+    <div class="tab_box"></div>
+    <div class="product_tabbar_contain">
+        <a class="btn" href="../jdshop_homepage/main.html">
+            <div class="tabbar_icon"><img src="../../icon/icon_main_home_red.png"></div>
+            <p>商城首页</p>
+        </a>
+
+        <a class="btn bg_red">
+            <div class="tabbar_icon">
+                <img src="../../icon/icon_already_collection.png">
+            </div>
+            <p>已关注</p>
+        </a>
+
+        <a class="btn choose_color" href="../jdshop_shoppingcart/shoppingcart.html">
+            <div class="tabbar_icon"><img src="../../icon/icon_main_car_red.png"></div>
+            <p>购物车</p>
+        </a>
+        <a class="shopping_btn orange" onclick="showProductSku.show({fn:function () {jfProductDetails.changeHideBtn('orange');}})">加入购物车</a>
+        <a class="shopping_btn red" onclick="showProductSku.show({fn:function() {jfProductDetails.changeHideBtn('red');}})">立即购买</a>
+    </div>
+
+</footer>
+
+
+
+
+
+
+
+
+<script src="../../js/jquery-3.0.0.min.js"></script>
+<script src="../../js/jdShopMain.js"></script>
+<script>
+
+    /*图片懒加载*/
+    jfLazyLoading.lazyLoadInit({
+
+        "bottomDistance":"50"//距离底部的距离，触发事件，单位省略
+    })
+
+
+    /*商品详情页图片滚动以及缩放*/
+    productInfoPlay.init({
+
+        "moveEle":"product_details_autoPlay",//包裹所有图片的class选择器
+
+        "moveEleParent":"product_autoPlay",//包括点点以及图片的父元素，class选择器
+
+        "allShowEle":"product_show_content",//弹出模块框架的class值
+
+        "scaleEleParent":"jdshow_center_center",//缩放元素的父元素，class值
+
+        fn:function(){//执行相应的脚本
+
+            jfProductDetails.scrollEle(document.getElementById('NavTab'),45)
+        }
+    });
+
+
+
+
+
+    productAddress = new jfShowPop({
+
+        'ele': 'product_address'
+
+    })
+
+
+
+
+    //滚动滑动到一定位置tab固定
+
+    window.addEventListener('scroll',jfProductDetails.slidePositionTab);
+
+    //图文&规格&售后 切换
+
+    jfProductDetails.clickTabChange(document.getElementById('NavTab'), 'choose_tab', 'tab');
+
+
+
+
+
+       /* var allImgEle = document.getElementById('product_image_in').getElementsByTagName('img');
+
+        for (var i = 0; i < allImgEle.length; i++) {
+
+            allImgEle[i].addEventListener('load', loadImg, false);
+
+        }
+
+        var thisAll = 0;
+
+        function loadImg() {
+
+            thisAll++;
+
+            if (thisAll == allImgEle.length) {
+
+                changeImageSize();
+
+            }
+             if(allImgEle.length == 0){
+
+                setTimeout(function () {
+
+                    changeImageSize();
+
+                },50)
+
+            }
+
+        }
+
+        function changeImageSize() {
+
+         //内部
+
+            var innerDom = document.getElementById('product_image_in');
+
+            var num = document.body.clientWidth / innerDom.scrollWidth;
+
+            changeTransform(innerDom, num);
+
+
+            function changeTransform(thisEle, sc) {
+
+                thisEle.style.transform = 'scale(' + sc + ')';
+
+                thisEle.style.webkitTransform = 'scale(' + sc + ')';
+
+                thisEle.style.transformOrigi = '0 0 0';
+
+                thisEle.style.webkitTransformOrigin = '0 0 0';
+
+            }
+        }*/
+
+
+
+    //点击穿透问题
+    //第一个参数为弹框id 第二个参数为带有滚动条元素的classname
+    jfProductDetails.clickThrough('product_address','address')
+
+
+
+
+    showProductAcc = new jfShowPop({
+
+        'ele': 'product_prompt_acc',
+
+        'scrollClassname':'pop_content'
+    })
+
+
+
+    //弹出框滚动条
+    jfProductDetails.accSrcollToTop();
+
+
+
+
+
+    //弹出框方法
+    showProductSku = new jfShowPop({
+
+        'ele':'product_prompt_buy',//弹框id
+
+        'scrollClassname':'pop_content'//可选参数 该id下带有滚动条元素的classname
+    })
+
+
+    //sku 选择
+
+    jfProductDetails.skuBoxChange();
+
+
+    //购物车加减
+    jfProductDetails.volumeChange(true);
+
+
+
+
+
+
+
+    showProductIframe = new jfIframe({
+
+        'ele':'iframDemo'//弹框id
+
+    })
+
+
+
+
+
+
+    //切换顶部tab
+    jfProductDetails.clickTabChange(document.getElementsByClassName('content')[0], 'choose_tab', 'nav_tab');
+    //滚动切换
+    jfProductDetails.tabScrollChange();
+
+
+
+
+
+</script>
+</body>
+
+</html>
