@@ -1,0 +1,77 @@
+footer.bottom_tabbar{
+  z-index: 999;
+  .tab_box{
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 55px;
+    z-index: 999;
+
+  }
+  .bottom_tabbar_contain{
+    position: fixed;
+    z-index: 999;
+    bottom: 0;
+    left: 0;
+    height: 55px;
+    width: 100%;
+    font-size: 14px;
+    color: #c91523;
+    background-color: #fff;
+
+    &:after{
+      content: '';
+      position: absolute;
+      top: -1px;
+      left: 0;
+      width: 100%;
+      border: 1px solid #ddd;
+      transform: scaleY(.2);
+    }
+    a.current_page {
+      display: block;
+      flex: 1;
+      padding: 7px 0 0;
+      color: #898989;
+      -webkit-tap-highlight-color: transparent;
+      &:active {
+        opacity: .6;
+      }
+      .tabbar_icon {
+        margin: 0 auto;
+        width: 24px;
+        height: 24px;
+        img {
+          width: 100%;
+          height: 100%;
+          &:first-child {
+            display: block;
+          }
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+      p {
+        line-height: 20px;
+        text-align: center;
+        font-size: 12px;
+
+      }
+      &.jd_tab_on {
+        .tabbar_icon {
+          img {
+            &:first-child {
+              display: none;
+            }
+            &:last-child {
+              display: block;
+            }
+          }
+        }
+        p {
+          color:#c91523;
+        }
+      }
+    }
+  }
+}
