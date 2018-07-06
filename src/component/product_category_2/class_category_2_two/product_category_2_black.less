@@ -1,0 +1,108 @@
+.product_category_page{
+  width: 275px;
+  height: 566px;
+  width: calc(~'100% - 100px');
+  height: calc(~'100vh - 101px');
+  overflow-y: scroll;
+
+  .recommended_title{
+    position: relative;
+    text-align: left;
+    padding:10px 9px;
+    display: flex;
+    justify-content: space-between;
+    //span{
+    //  /*标题装饰线*/
+    //  width: 100px;
+    //  height: 22px;
+    //  position: absolute;
+    //  //&:after{
+    //  //  content: '';
+    //  //  display: block;
+    //  //  position: relative;
+    //  //  top: 11px;
+    //  //  left: 6px;
+    //  //  width: 100%;
+    //  //  height: 1px;
+    //  //  color: #4a4a4a;
+    //  //  border-bottom: 1px solid #4a4a4a;
+    //  //  transform: scaleY(0.3);
+    //  //}
+    //}
+    .look_all{
+      display: flex;
+      justify-content: center;
+      color: #808080;
+
+      img{
+        width: 18px;
+        height: 18px;
+        margin-left: 2.6px;
+        margin-top: 1px;
+      }
+    }
+
+  }
+
+  .title{
+    padding: 10px;
+    font-weight: bold;
+    i{
+      position: relative;
+      left: 5px;
+      top: -5px;
+      display: inline-block;
+      border-top:1px solid #ababab ;
+      width: 60%;
+      transform-origin: 0 0;
+      transform: scaleY(.6);
+    }
+  }
+  .product_category_list{
+    position: relative;
+    width: 100%;
+    padding: 0 6px;
+    box-sizing: border-box;
+    .product_box{
+      display: block;
+      width: 32%;
+      background-color: #fff;
+      box-sizing: inherit;
+      float: left;
+      margin:0 4px 4px 0;
+      color: #4a4a4a;
+      .product_img{
+        position: relative;
+        width: 65px;
+        height: 65px;
+        margin: 5px auto;
+        img{
+          width: 100%;
+        }
+      }
+      p{
+        text-align: center;
+        font-size: 12px;
+        line-height: 20px;
+        overflow: hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+      }
+      &:nth-child(3n+0){
+        margin-right: 0;
+      }
+      &:active{
+        background-color: #ececec;
+        opacity: .8;
+      }
+    }
+    &:after{
+      content: '';
+      display: block;
+      clear: both;
+      height: 0;
+      overflow: hidden;
+    }
+  }
+}
+
