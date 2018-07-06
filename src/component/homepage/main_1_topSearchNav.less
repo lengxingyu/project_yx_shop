@@ -1,0 +1,113 @@
+nav.top_search_bar{
+  position: relative;
+  z-index: 500;
+  .tab_box{
+    box-sizing: border-box;
+    height: 100%;
+    padding-bottom: 45px;
+    overflow: auto;
+  }
+  .top_search_contain{
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: -webkit-linear-gradient(top,#20232b,#343943);
+    height: 45px;
+    width: 100%;
+    .left{
+      font-size: 10px;
+      color: #fff;
+      padding: 0 10px 0 15px ;
+      &:active{
+      opacity: 0.5;
+      }
+      .icon_btn{
+        margin: 0 auto;
+        background: url("../icon/icon_main_home_jiafu.png") no-repeat;
+        background-size: 100%;
+        width: 22px;
+        height: 22px;
+        &+p{
+          width: 40px;
+          white-space: nowrap;
+          text-align: center;
+        }
+      }
+      p.back{
+        width: 21px;
+        height: 21px;
+        img{
+          width: 100%;
+        }
+      }
+
+    }
+    .content{
+      position: relative;
+      padding: 8px 15px 8px 5px;
+      height: 30px;
+      width: 100%;
+      .search_tab{
+        position: relative;
+        background-color: #fff;
+        color: #ababab;
+        font-size: 14px;
+        height: 100%;
+        padding: 0 15px;
+        border-radius: 15px;
+
+        max-width: 210px;
+        max-width: calc(100% - (5px + 5px) * 2);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        -webkit-line-clamp: 1;
+
+
+        i{
+          display: inline-block;
+          background: url("../icon/search_bar_glass.png") no-repeat;
+          background-size: 100%;
+          width: 17px;
+          height: 17px;
+          margin: 0 2px;
+
+        }
+        form{
+          width: 100%;
+        }
+        input{
+          display: block;
+          border: 0;
+          resize: none;
+          color: #4a4a4a;
+          font-size: 14px;
+          outline: 0;
+          width: 100%;
+          overflow: hidden;
+          margin-left: 10px;
+        }
+        span{
+          padding-left: 10px;
+
+          max-width: 210px;
+          max-width: calc(100% - (5px + 5px) * 2);
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+
+        }
+      }
+    }
+    .right {
+      display: inline-block;
+      padding-right: 15px;
+      text-align: center;
+      color: #fff;
+      white-space: nowrap;
+      &:active {
+        opacity: 0.5;
+      }
+    }
+  }
+}
