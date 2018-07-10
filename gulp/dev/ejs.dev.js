@@ -27,8 +27,6 @@ function devEjs(){
 
                 var addHtml = "";
 
-                addHtml += "<link rel='stylesheet'  href='../../css/bootstrap.min.css'/>\n";//第二版开发样式
-
                 addHtml += "<meta name='viewport' content='width=device-width,initial-scale=1,user-scalable=0,minimum-scale=1, maximum-scale=1'>\n";
 
                 addHtml += "<meta name='apple-mobile-web-app-capable' content='yes' />\n";
