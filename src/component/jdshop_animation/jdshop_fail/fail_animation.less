@@ -1,0 +1,116 @@
+.fail_animation {
+
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  height: 160px;
+
+}
+
+.fail_animation_circle {
+
+  width: 147px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -398px -22px;
+
+}
+
+.fail_animation_cloud {
+  opacity: .30;
+  width: 30px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -342px -34px;
+  left: 1px;
+  top: -15px;
+  z-index: 1;
+  position: absolute;
+  animation: cloudMove 2s infinite alternate;
+
+  @keyframes cloudMove {
+    0% {
+      transform: scale3d(.4, .4, .6)
+    }
+    100% {
+      transform: scale3d(.7, .7, .6);
+    }
+  }
+}
+
+.fail_animation_line2 {
+  opacity: .30;
+  width: 32px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -284px -34px;
+  right: 100px;
+  top: -5px;
+  z-index: 1;
+  position: absolute;
+  animation: line2Move 2.5s infinite alternate;
+}
+
+@keyframes line2Move {
+  0% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.fail_animation_line3 {
+  opacity: .30;
+  width: 23px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -236px -34px;
+  right: 5px;
+  top: 12px;
+  z-index: 1;
+  position: absolute;
+  animation: line3Move 2.5s infinite alternate;
+}
+
+@keyframes line3Move {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+.fail_animation_wrong {
+  width: 72px;
+  height: 74px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -137px -54px;
+  left: 30px;
+  top: 23px;
+  z-index: 9;
+  position: absolute;
+  animation: cloudMove 2.2s infinite alternate;
+  @keyframes cloudMove {
+    0% {
+      transform: scale3d(.7, .7, .6)
+    }
+    100% {
+      transform: scale3d(.9, .9, .6);
+
+    }
+  }
+}
+
+.fail_animation_text {
+
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+
+}

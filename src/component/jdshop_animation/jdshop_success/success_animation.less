@@ -1,0 +1,192 @@
+.success_animation {
+
+  position: fixed;
+  margin: auto;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 140px;
+  height: 160px;
+  overflow: hidden;
+
+}
+
+.success_animation_circle {
+
+  width: 147px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -398px -22px;
+  z-index: 8;
+
+}
+
+.success_animation_cloud {
+  opacity: .30;
+  width: 30px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -342px -34px;
+  left: 1px;
+  top: -5px;
+  z-index: 1;
+  position: absolute;
+  animation: cloudMove 2s .3s both;
+  animation-direction: alternate;
+
+  @keyframes cloudMove {
+    0% {
+      transform: scale3d(.4, .4, .6)
+    }
+    100% {
+      transform: scale3d(.7, .7, .6);
+    }
+  }
+}
+
+.success_animation_line2 {
+  opacity: .30;
+  width: 32px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -284px -34px;
+  right: 90px;
+  top: -5px;
+  z-index: 1;
+  position: absolute;
+  animation: line2Move 2.5s  .3s infinite both;
+  animation-direction: alternate;
+}
+
+@keyframes line2Move {
+  0% {
+    transform: translateX(-25px);
+  }
+  100% {
+    transform: translateX(-18px);
+  }
+}
+
+.success_animation_line3 {
+  opacity: .30;
+  width: 23px;
+  height: 105px;
+  background-image: url("../images/fail_animation_wrong.png");
+  background-position: -236px -34px;
+  right: 5px;
+  top: 12px;
+  z-index: 1;
+  position: absolute;
+  animation: line3Move 2.5s  .3s infinite both;
+  animation-direction: alternate;
+}
+
+@keyframes line3Move {
+  0% {
+    transform: translateX(5px);
+  }
+  100% {
+    transform: translateX(-2px);
+  }
+}
+
+
+
+
+/*打钩*/
+
+
+.m-box {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  margin: 200px auto;
+
+
+  .m-duigou {
+
+    width: 100px;
+    height: 50px;
+    position: absolute;
+    left: 75px;
+    top: -250px;
+    margin: -40px 0 0 -50px;
+    transform: rotate(-45deg);
+    overflow: hidden;
+
+    &:before {
+
+      content: "";
+      position: absolute;
+      background: -webkit-linear-gradient(-45deg, #fd7070, #fe4848);
+      border-radius: 10px;
+
+      width: 12px;
+      height: 50px;
+      left: 0;
+      animation: dgLeft .1s linear .1s both;
+
+    }
+
+    &:after {
+
+      content: "";
+      position: absolute;
+      background: -webkit-linear-gradient(45deg, #fd7070, #fe4848,#d61515);
+      border-radius: 10px;
+      width: 94px;
+      height: 12px;
+      bottom: 0;
+      left: 0;
+      animation: dgRight .1s linear .2s both;
+
+    }
+
+  }
+  @keyframes dgLeft {
+
+    0% {
+     /*top: -100%*/
+      transform: translate3d(0,-100%,0);
+
+    }
+
+    100% {
+      /*top: 0%*/
+      transform: translate3d(0,0,0);
+
+    }
+
+  }
+
+  @keyframes dgRight {
+
+    0% {
+      /*left: -100%*/
+      transform: translate3d(-100%,0,0);
+
+    }
+
+    100% {
+      /*    left: 0%*/
+
+      transform: translate3d(0,0,0);
+
+    }
+  }
+}
+
+
+
+.success_animation_text {
+  position: absolute;
+  text-align: center;
+  margin-top: 5px;
+  font-size: 14px;
+  bottom: 0;
+  width: inherit;
+
+  //padding: 380px 65px 100px 80px;
+
+}
