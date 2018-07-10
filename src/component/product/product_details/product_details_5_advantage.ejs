@@ -1,7 +1,10 @@
-<!--利益点-->
+
+
+<!--京东利益点-->
 <div class="product_details_advantage jdshop_alignment_center">
     <!-- 售后 -->
     <div><span></span>京东发货&售后</div>
+
     <!-- 免运费 -->
     <div><span></span>满99元包邮，无续重运费</div>
 
@@ -12,3 +15,39 @@
     <!--<div class="nonsupport_sale_problem"><p></p>不支持7天无理由</div>-->
 
 </div>
+
+
+<!--严选利益点-->
+<!--<div class="product_details_advantage jdshop_alignment_center">
+    &lt;!&ndash; 售后 &ndash;&gt;
+    <div><span></span>网易严选发货&售后</div>
+
+    &lt;!&ndash; 免运费 &ndash;&gt;
+    <div><span></span>满88免运费</div>
+
+    &lt;!&ndash; 七天无理由 &ndash;&gt;
+    <div class="sale_problem"><span></span>网易自营商品</div>
+
+    &lt;!&ndash; 七天无理由 &ndash;&gt;
+    &lt;!&ndash;<div class="nonsupport_sale_problem"><p></p>不支持7天无理由</div>&ndash;&gt;
+
+</div>-->
+
+
+<script>
+
+    $(document).ready(function(){
+        $(".product_details_advantage").click(function(){
+            $(".yx_pop_up").slideDown("slow");
+        });
+    });
+
+    $(document).ready(function(){
+        $(".pop_cancel").click(function(){
+            $(".yx_pop_up").slideUp("slow");
+        });
+    });
+
+</script>
+
+
