@@ -1,0 +1,111 @@
+<div class="jd_drop_down" id="filter_list">
+    <div class="jd_drop_down_content">
+        <div class="filter_list">
+            <div class="sort_list">
+                <!-- 编辑地址 -->
+                <div class="address_block">
+                    <div class="title">地区</div>
+                    <div class="address jdshop_alignment_center" onclick="productAddress.show({fn:
+
+function(){
+
+     addressChoose.run({
+
+     //ip地址
+     yourUrl:'http://jd-test.jia-fu.cn',
+
+     type: 'get',
+
+     targetDom:document.getElementById('product_address_show'),
+
+     //初始化id
+     startId:['1','72','2799'],
+
+     //初始化name
+     startName:['北京', '朝阳区', '三环以内'],
+
+     fn:function() {
+
+       productAddress.hide()
+       //城市名称数组
+       console.log(addressChoose.addressCity)
+       //城市id数组
+       console.log(addressChoose.addressCityId)
+     }
+
+     })
+}
+
+})">
+                        <div>
+                            <img class="location_icon" src="../../images/product_details_1_location.png">
+                            <span id="search_address_show">上海市，浦东新区,城区啦啦啦</span>
+                        </div>
+                        <img class="edit_icon" src="../../images/product_details_9_edit.png">
+                    </div>
+
+                </div>
+                <!--价格 -->
+                <div class="price">
+                    <div class="title">价格</div>
+                    <input type="tel" class="filter_input" pattern="[0-9]*" placeholder="最低价">-<input type="tel" class="filter_input" pattern="[0-9]*" placeholder="最高价">
+                </div>
+                <!--分类-->
+                <div class="sort_block">
+                    <div class="title">运行内存</div>
+                    <div class="type">
+                        <div>1G</div>
+                        <div>2G</div>
+                        <div>3G</div>
+                        <div>4G</div>
+                    </div>
+                </div>
+                <div class="sort_block">
+                    <div class="title">机身内存</div>
+                    <div class="type">
+                        <div>8G</div>
+                        <div>16G</div>
+                        <div>32G</div>
+                        <div>64G</div>
+                        <div>128G</div>
+                        <div>156G</div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="operation_btn">
+            <div class="filter_reset">重置</div>
+            <div class="ensure" onclick="searchFilter.hide()">确定</div>
+        </div>
+    </div>
+    <div class="jd_drop_down_bg"></div>
+</div>
+
+
+<script>
+
+    //地址
+    productAddress = new jfShowPop({
+
+        'ele': 'product_address',
+
+        'scrollClassname':'address'
+
+    })
+
+    //筛选
+    searchFilter = new jfDropDown({
+
+        'ele': 'filter_list',//id选择器
+
+        'scrollClassname':'sort_list'//含有滚动条元素的classname
+    })
+
+    jdSearch_results.filterBlockEvent();
+
+    //光标
+    //jdSearch_results.inputCursor();
+
+</script>

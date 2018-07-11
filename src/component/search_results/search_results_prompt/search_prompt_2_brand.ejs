@@ -1,0 +1,42 @@
+<div class="jd_drop_down" id="brand_list">
+    <div class="jd_drop_down_content">
+        <div class="brand_list">
+            <div>小米(MI)</div>
+            <div>联想</div>
+            <div>格力</div>
+            <div>三星</div>
+            <div>TCL</div>
+            <div>华为啦啦啦啦</div>
+            <div>摩托罗拉</div>
+            <div>小米(MI)</div>
+            <div>联想</div>
+            <div>格力</div>
+            <div>三星</div>
+            <div>TCL</div>
+            <div>华为啦啦啦啦</div>
+            <div>摩托罗拉</div>
+            <div>魅族</div>
+            <div>魅族</div>
+            <div>其他</div>
+            <div>其他</div>
+        </div>
+        <div class="operation_btn">
+            <div class="brand_reset">重置</div>
+            <div class="ensure" onclick="searchBrand.hide()">确定</div>
+        </div>
+    </div>
+    <div class="jd_drop_down_bg"></div>
+</div>
+
+<script>
+    //品牌选择
+    searchBrand = new jfDropDown({
+        'ele': 'brand_list',//id选择器
+
+        'scrollClassname':'brand_list'//带有滚动条元素的classname
+    })
+
+    jdSearch_results.brandBlockEvent();
+
+
+</script>

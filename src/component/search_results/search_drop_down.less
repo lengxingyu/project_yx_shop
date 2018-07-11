@@ -1,0 +1,41 @@
+/*下拉框*/
+.jd_drop_down {
+
+  display: none;
+
+}
+
+.jd_drop_down.show .jd_drop_down_content{
+
+  transform: translate3d(0,90px,0);
+
+}
+  .jd_drop_down_content{
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    box-shadow: 0 0 3px #E9E9E9;
+    z-index: 410;
+    transform: translate3d(0,-120%, 0);
+    transition: transform .3s;
+    background: white;
+    max-height: calc(80vh);
+    overflow-y: scroll;
+  }
+  .jd_drop_down_bg{
+    position: fixed;
+    top: 90px;
+    left: 0;
+    height: calc(~'100% - 90px');
+    width: 100%;
+    background: black;
+    z-index: -1;
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  .jd_drop_down.show .jd_drop_down_bg{
+    opacity: .3;
+    z-index: 400;
+  }

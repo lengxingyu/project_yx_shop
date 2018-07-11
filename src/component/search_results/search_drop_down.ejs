@@ -1,0 +1,41 @@
+<style>
+
+    button{
+
+        display: block;
+        height:150px;
+        width:150px;
+
+    }
+
+</style>
+
+<button onclick="pull1.show()">点击下拉1</button>
+
+<button onclick="pull2.show()">点击下拉2</button>
+
+
+<div class="jd_drop_down" id="demo3">
+
+
+    <div class="jd_drop_down_content">111</div>
+
+    <div class="jd_drop_down_bg"></div>
+
+</div>
+
+<div class="jd_drop_down" id="demo4">
+
+
+    <div class="jd_drop_down_content">222</div>
+
+    <div class="jd_drop_down_bg"></div>
+
+</div>
+
+<script>
+
+    pull1=new jfDropDown({'ele':'demo3'})
+
+    pull2=new jfDropDown({'ele':'demo4'})
+</script>

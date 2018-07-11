@@ -1,0 +1,50 @@
+#general_list{
+
+  .general_list{
+    div{
+      position: relative;
+      padding: 15px;
+      &.selected{
+        position: relative;
+        color: #ff0200;
+        &:before{
+          content: '';
+          width: .7rem;
+          height: .4rem;
+          position: absolute;
+          top: calc(~'(100% - .3rem)/2');
+          right: 20px;
+          margin-left: -.3rem;
+          margin-top: -.3rem;
+          background: 0 0;
+          border: 1px solid #ff0200;
+          border-top: 0;
+          border-right: 0;
+          border-radius: 0;
+          transform: rotate(-45deg);
+        }
+      }
+      &:active{
+        background: #f1f1f1;
+      }
+      &:after{
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 15px;
+        box-sizing: border-box;
+        width: 92%;
+        height: 1px;
+        color: #ddd;
+        border-bottom: 1px solid #ddd;
+        transform-origin: 0 0;
+        transform: scaleY(.6);
+      }
+      &:last-child:after{
+        content: '';
+        border-bottom: none;
+      }
+    }
+  }
+}
+
