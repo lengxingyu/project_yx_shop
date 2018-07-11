@@ -1,0 +1,175 @@
+<!-- 顶部导航 -->
+<nav class="top_search_bar">
+    <div class="tab_box"></div>
+    <div class="top_search_contain jdshop_alignment_center">
+        <a class="left" onclick="window.history.go(-1)">
+            <p class="back"><img src="../../images/nav_go_back.png"></p>
+        </a>
+        <a class="content" href="../yxshop_search/search.html">
+            <div class="search_tab jdshop_alignment_middle" id="searchTab">
+                <i></i>
+                <span>小米</span>
+            </div>
+        </a>
+        <a class="right">
+        </a>
+    </div>
+</nav>
+
+<!--自营店铺-->
+<div class="product_support_acc_1">
+
+    <div class="goods_support">
+        <img data-src="../../images/yx_main_icon_8.png"
+             src="../../images/yx_main_icon_8.png"
+             class="loading_img">
+    </div>
+
+    <!--网易严选icon-->
+    <!--<div class="goods_support">
+        <img data-src="../../images/yx_main_icon_9.png"
+             src="../../images/yx_main_icon_9.png"
+             class="loading_img">
+    </div>-->
+
+    <div class="support_acc_text">
+
+        <div class="acc_text_1">
+            <div>京东自营</div>
+            <span>全部商品【456265】</span>
+        </div>
+
+        <a href=""class="acc_text">
+            进店逛逛 >
+        </a>
+
+
+    </div>
+
+
+</div>
+
+
+<!-- 固定tab-->
+<div class="search_results_nav">
+    <div class="tab_box"></div>
+    <div class="search_nav_content" onclick="jfProductDetails.scrollEle
+    (document.getElementsByClassName('')[0],87)">
+        <!-- 综合-->
+        <div class="comprehensive search_results_tab">
+            <span>综合</span>
+            <div class="search_results_tab arrow">▼</div>
+        </div>
+        <!-- 销量 -->
+        <div class="volume search_results_tab" onclick="jdSearch_results.hideShow(2)">销量</div>
+        <!-- 价格 -->
+        <div class="price" onclick="jdSearch_results.hideShow(2)">
+            <div class="search_results_tab arrow up_arrow">▲</div>
+            <div class="search_results_tab arrow down_arrow">▼</div>
+            <span>价格</span>
+        </div>
+        <div class="brand ">
+            <span>品牌</span>
+            <div class="arrow">▼</div>
+        </div>
+        <div class="filter">
+            <span>筛选</span>
+            <div class="filter_icon"></div>
+        </div>
+
+    </div>
+
+
+    <script>
+
+        //滚动滑动到一定位置tab固定
+
+        window.addEventListener('scroll',jfProductDetails.slidePositionTab);
+
+    </script>
+
+</div>
+
+
+<!-- 未找到该商品 1030添加-->
+
+<div class="not_found">
+    <img src="../../images/status_spot.png">
+    <p>抱歉，没有找到该商品，为您推荐<span>“小米”</span>下搜索结果</p>
+</div>
+
+<!-- 推荐商品 -->
+<div class="search_recommend_content">
+
+    <%- include('search_results_list/search_results_2_recommend.ejs')%>
+</div>
+
+<!-- 商品列表-->
+<div class="search_results_content">
+
+    <%- include('search_results_list/search_results_1_list.ejs') %>
+
+</div>
+
+<!-- 换个词搜搜 1030添加-->
+<div class="search_change_word">
+    <%- include('search_results_list/search_results_3_change.ejs') %>
+
+</div>
+
+
+<!--地址选择-->
+<div class="address_dialog">
+
+    <%- include('../product/product_prompt/product_prompt_1_address.ejs')%>
+
+</div>
+
+<!--下拉框-->
+<div id="search_prompt">
+
+    <%- include('search_results_prompt/search_prompt_1_general.ejs')%>
+
+    <%- include('search_results_prompt/search_prompt_2_brand.ejs')%>
+
+    <%- include('search_results_prompt/search_prompt_3_filter.ejs')%>
+
+</div>
+
+<script>
+
+    /*图片懒加载*/
+    jfLazyLoading.lazyLoadInit({
+
+        "bottomDistance":"50"//距离底部的距离，触发事件，单位省略
+    })
+
+    //选择模块
+    jdSearch_results.searchRecommend({
+
+        //jdSearch_results.keyName
+
+        //jdSearch_results.categoryName
+
+
+        //keyname绑定方法
+        keyFn:function () {
+
+
+        },
+        //categoryname绑定方法
+        categoryFn:function () {
+
+
+        }
+
+    });
+
+
+    jdSearch_results.generalBlockEvent();
+
+    //价格高低选择
+    jdSearch_results.priceChoose()
+
+
+</script>

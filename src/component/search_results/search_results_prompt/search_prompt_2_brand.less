@@ -1,0 +1,71 @@
+#brand_list{
+  .brand_list{
+    max-height: 250px;
+    padding: 15px;
+    overflow-y: scroll;
+      div{
+        float: left;
+        width: 20%;
+        font-size: 12px;
+        box-sizing: border-box;
+        padding: 3px 5px;
+        margin: 8px;
+        border: 1px solid transparent;
+        text-align: left;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow:ellipsis;
+        background: #f1f1f1;
+        border-radius: 5px;
+        &.selected{
+          color: #ff0200;
+          background: #fff;
+          border: 1px solid #ff9a99;
+          border-radius: 5px;
+        }
+
+        &:active{
+          background: #f1f1f1;
+          border-radius: 5px;
+        }
+      }
+      &:after{
+        content:'.';
+        display:block;
+        height:0;
+        visibility:hidden;
+        clear:both;
+      }
+
+  }
+  .operation_btn{
+    position: relative;
+    div{
+      float: left;
+      width: 50%;
+      height: 42px;
+      line-height: 42px;
+      text-align: center;
+      &.ensure{
+        color: #fff;
+        background: -webkit-linear-gradient(left, #fd3030, #d61515);
+      }
+      &:active{
+        opacity: .8;
+      }
+    }
+    &:before{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      box-sizing: border-box;
+      width: 50%;
+      height: 1px;
+      color: #ddd;
+      border-bottom: 1px solid #ddd;
+      transform: scaleY(.6);
+    }
+  }
+}
+

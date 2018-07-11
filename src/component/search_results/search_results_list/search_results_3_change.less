@@ -1,0 +1,30 @@
+.search_change{
+  padding: 15px;
+  .title{
+    font-size: 16px;
+  }
+  .change_content{
+    position: relative;
+    div{
+      float: left;
+      font-size: 12px;
+      box-sizing: border-box;
+      padding: 3px 8px;
+      margin: 8px 8px 8px 0;
+      border: 1px solid transparent;
+      text-align: center;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow:ellipsis;
+      background: #ddd;
+      border-radius: 5px;
+    }
+    &:after{
+      content: "";
+      display: block;
+      height: 0;
+      clear: both;
+    }
+  }
+
+}

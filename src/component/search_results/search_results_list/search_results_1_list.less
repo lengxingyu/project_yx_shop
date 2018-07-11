@@ -1,0 +1,106 @@
+.search_results_list{
+
+  .goods_list{
+    position: relative;
+    background-color: #fff;
+    padding: 10px 15px;
+    &:first-child:after{
+      content: '';
+      border-bottom: none;
+    }
+    &:after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 15px;
+      box-sizing: border-box;
+      width: 92%;
+      height: 1px;
+      color: #ddd;
+      border-bottom: 1px solid #ddd;
+      transform-origin: 0 0;
+      transform: scaleY(.6);
+    }
+    &:active{
+      opacity: .8;
+      background-color: #e4e4e4;
+    }
+    &.out_of_stock {
+      pointer-events: none;
+      .main_images {
+        position: relative;
+        img {
+          opacity: .6;
+        }
+        &:after {
+          content: '';
+          position: absolute;
+          top: calc(~'(100% - 70px)/2');
+          left: calc(~'(100% - 70px)/2');
+          background-image: url("../images/shopping_cart_2_soldout.png");
+          background-size: 100%;
+          background-position: center;
+          width: 70px;
+          height: 70px;
+
+        }
+      }
+
+      .main_details{
+        .title {
+          color: #ababab;
+        }
+      }
+      .price{
+        color: #ababab;
+      }
+    }
+    }
+  .main_images{
+    width: 90px;
+    height: 90px;
+    margin: 5px;
+    img{
+      width: 100%;
+    }
+  }
+  .main_details{
+    position: relative;
+    width: calc(~'100% - 90px');
+    .title{
+      color: #4a4a4a;
+      line-height: 18px;
+      font-size: 14px;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      display: -webkit-box;
+      -webkit-box-orient: vertical;
+      -webkit-line-clamp: 3;
+      margin: 5px 0 15px;
+      min-height: 54px;
+      &:before{
+        content: '网易严选';
+        display: inline-block;
+        padding: 0 4px;
+        border: 1px solid #ff4040;
+        color: #ff4040;
+        border-radius: 10px;
+        font-size: 12px;
+        margin-right: 6px;
+      }
+    }
+
+  }
+  .sku_volume_purchased{
+    .price{
+      font-size: 16px;
+      &~div{
+        font-size: 14px;
+        span{
+          font-size: 12px;
+        }
+      }
+    }
+  }
+
+  }
